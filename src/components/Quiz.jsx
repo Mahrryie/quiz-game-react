@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import completedQuizImg from "../assets/quiz-complete.png";
 import questions from "../questions";
+import ProgressBar from "./ProgressBar";
+
+const TIMEOUT_MS = 5000;
 
 export default function Quiz() {
   const [answers, setAnswers] = useState([]);
@@ -8,10 +11,15 @@ export default function Quiz() {
   const activeQuestionID = answers.length;
   const quizIsComplete = activeQuestionID === questions?.length;
 
-  function handleSelectAnswer(answer) {
-    // console.log(answer);
-    setAnswers((prevState) => [...prevState, answer]);
-  }
+  const handleSelectAnswer = useCallback(
+    (answer) => setAnswers((prevState) => [...prevState, answer]),
+    []
+  );
+
+  const handleSkipAnswer = useCallback(
+    () => handleSelectAnswer(null),
+    [handleSelectAnswer]
+  );
 
   if (quizIsComplete) {
     return (
@@ -29,6 +37,12 @@ export default function Quiz() {
   return (
     <div id="quiz">
       <div id="question">
+        {/* key used to force update ProgressBar */}
+        <ProgressBar
+          key={activeQuestionID}
+          timeout={TIMEOUT_MS}
+          onTimeout={handleSkipAnswer}
+        />
         <h2>{questions[activeQuestionID].text}</h2>
         <ul id="answers">
           {shuffledQuestion.map((answer) => {
