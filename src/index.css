@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.5;
 
   color: #ebe7ef;
@@ -42,7 +42,7 @@ header img {
 }
 
 header h1 {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: bold;
   font-size: 2.5rem;
   letter-spacing: 0.6rem;
@@ -57,7 +57,7 @@ header h1 {
   max-width: 40rem;
   margin: 2rem auto;
   font-size: 0.8rem;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   text-align: center;
 }
 
@@ -90,14 +90,14 @@ header h1 {
 }
 
 #question-overview {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 0.8rem;
   color: #9082a3;
   margin: 0;
   text-transform: uppercase;
 }
 
-#question progress {
+#quiz progress {
   width: 50%;
   height: 0.5rem;
   border-radius: 24px;
@@ -105,30 +105,30 @@ header h1 {
   margin: 0;
 }
 
-#question progress::-webkit-progress-bar {
+#quiz progress::-webkit-progress-bar {
   background: #6a558a;
   border-radius: 24px;
 }
 
-#question progress::-webkit-progress-value {
+#quiz progress::-webkit-progress-value {
   background: #9e5ef8;
   border-radius: 24px;
 }
 
-#question progress.answered {
+#quiz progress.selected {
   background: #f8e59c;
 }
 
-#question progress.answered::-webkit-progress-value {
+#quiz progress.selected::-webkit-progress-value {
   background: #f8e59c;
 }
 
-#question progress.answered::-webkit-progress-bar {
+#question progress.selected::-webkit-progress-bar {
   background: #6a558a;
 }
 
-#question h2 {
-  font-family: 'Roboto', sans-serif;
+#quiz h2 {
+  font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   font-weight: normal;
   margin: 0.5rem 0 2.5rem 0;
@@ -153,7 +153,7 @@ header h1 {
 .answer button {
   display: inline-block;
   width: 100%;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 0.9rem;
   padding: 1rem 2rem;
   border: none;
@@ -195,7 +195,7 @@ header h1 {
 }
 
 #skip-action button {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 1rem;
   border: none;
   background: transparent;
@@ -233,7 +233,7 @@ header h1 {
 }
 
 #summary h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 3rem;
   text-align: center;
   margin: 0;
@@ -253,7 +253,7 @@ header h1 {
 }
 
 #summary h3 {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 1rem;
   margin: 0 auto;
   display: flex;
@@ -274,7 +274,7 @@ header h1 {
 
 #summary .user-answer {
   margin: 0.25rem 0;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: bold;
   color: #251e2f;
 }
@@ -309,13 +309,13 @@ header h1 {
 }
 
 #summary-stats .number {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 3rem;
   color: #594276;
 }
 
 #summary-stats .text {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   text-transform: uppercase;
   font-size: 0.8rem;
   color: #30273a;

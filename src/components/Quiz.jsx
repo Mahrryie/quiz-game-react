@@ -10,6 +10,8 @@ export default function Quiz() {
   const [answerState, setAnswerState] = useState("");
   const [userAnswers, setUsersAnswers] = useState([]);
 
+  let timer = QUESTION_TIME;
+
   const activeQuestionId =
     answerState === "" ? userAnswers.length : userAnswers.length - 1;
 
@@ -50,13 +52,22 @@ export default function Quiz() {
     );
   }
 
+  if (answerState === "selected") {
+    timer = 1000;
+  }
+
+  if (answerState !== "") {
+    timer = 2000;
+  }
+
   return (
     <>
       <div id="quiz">
         <QuestionTimer
           key={`timer-${activeQuestionId}`}
-          onTimeout={handleTimeout}
-          time={QUESTION_TIME}
+          onTimeout={answerState === "" ? handleTimeout : null}
+          time={timer}
+          mode={answerState}
         />
         <div id="question">
           <p>
