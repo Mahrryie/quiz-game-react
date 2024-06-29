@@ -294,6 +294,7 @@ header h1 {
 
 #summary-stats {
   display: flex;
+  align-items: center;
   gap: 3rem;
   width: 60%;
   margin: 2rem auto;

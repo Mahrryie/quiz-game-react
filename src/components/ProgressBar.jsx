@@ -24,14 +24,11 @@ export default function ProgressBar({ timeout, mode, onTimeout }) {
   }, []);
 
   return (
-    <header>
-      {remainingTime}
-      <progress
-        id="question-time"
-        max={timeout}
-        value={remainingTime}
-        className={mode}
-      />
-    </header>
+    <progress
+      id="question-time"
+      max={timeout}
+      value={remainingTime}
+      className={mode}
+    />
   );
 }
